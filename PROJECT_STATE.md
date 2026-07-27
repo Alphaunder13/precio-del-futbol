@@ -54,14 +54,29 @@ Villarreal CF quedó `sin_confirmar` porque su página no cargó. Todo en
 
 ---
 
+## Repositorio
+
+https://github.com/Alphaunder13/precio-del-futbol (público, 33 archivos,
+`main` sincronizada).
+
+La autoría de los commits usa la dirección `noreply` de GitHub y no el correo
+personal, para que un repositorio público no lo indexe.
+
+---
+
 ## Próxima acción exacta
 
-**Desplegar.** Requiere intervención humana en dos puntos que no se pueden
-automatizar sin credenciales:
+**Desplegar en Streamlit Community Cloud.** Es el único paso que queda y exige
+una sesión iniciada, así que lo tiene que hacer una persona:
 
-1. Crear el repositorio remoto en GitHub y hacer `git push`.
-2. Entrar en share.streamlit.io, autorizar el repositorio y desplegar
+1. Entrar en https://share.streamlit.io con la cuenta de GitHub `Alphaunder13`.
+2. *Create app* → *Deploy a public app from GitHub*.
+3. Repositorio `Alphaunder13/precio-del-futbol`, rama `main`, archivo principal
    `streamlit_app.py`.
+4. *Deploy*. No hay que configurar ningún secreto: la aplicación no usa ninguno.
+
+Después, verificar en una ventana de incógnito que la portada muestra los ocho
+clubes y que el número destacado es el de RC Deportivo, 25,8 horas.
 
 Recordatorios de despliegue conocidos:
 
