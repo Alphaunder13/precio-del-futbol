@@ -1,0 +1,210 @@
+# Todo el texto visible de la aplicación. El código no contiene ni una sola
+# cadena destinada al usuario. Español de España. Ver DECISIONS.md D-009.
+
+producto:
+  nombre: "El Precio del Fútbol"
+  reclamo: "Cuánto cuesta ir al fútbol en España, y cuánto cuesta según dónde vives"
+  temporada_etiqueta: "Temporada 2026/27 · LaLiga EA Sports"
+
+navegacion:
+  inicio: "Inicio"
+  ranking: "Ranking"
+  ficha: "Ficha de club"
+  datos: "Datos"
+  metodologia: "Metodología"
+
+inicio:
+  titulo: "El Precio del Fútbol"
+  entradilla: "El abono más barato de cada club, medido en horas de trabajo al salario medio de su comunidad autónoma."
+  destacado_prefijo: "El abono más barato de"
+  destacado_sufijo: "equivale a"
+  destacado_unidad: "horas de trabajo"
+  destacado_pie: "al salario medio de {comunidad}"
+  etiqueta_mas_barato: "Más barato en horas de trabajo"
+  etiqueta_mas_caro: "Más caro en horas de trabajo"
+  etiqueta_clubes: "Clubes con precio verificado"
+  etiqueta_sin_publicar: "Clubes que no publican tarifa"
+  pie_ranking: "Ordenado por horas de trabajo. Pulsa un club para ver de dónde sale cada número."
+
+ranking:
+  titulo: "Ranking"
+  entradilla: "Ocho clubes con tarifa oficial verificada. La tabla se ordena por cualquier columna."
+  columnas:
+    posicion: "#"
+    club: "Club"
+    comunidad: "Comunidad autónoma"
+    zona: "Zona más económica"
+    precio: "Precio del abono"
+    horas: "Horas de trabajo"
+    por_partido: "Por partido"
+    partidos: "Partidos de liga"
+    confianza: "Confianza"
+  aviso_confianza_media: "Los clubes marcados con confianza media no publican precio de nuevo abonado: su cifra puede estar por debajo de lo que pagaría alguien que se abona hoy."
+
+ficha:
+  titulo: "Ficha de club"
+  selector: "Elige un club"
+  bloque_precio: "Cómo se compone el precio"
+  bloque_calculo: "De dónde sale el número"
+  bloque_fuente: "Fuente"
+  etiqueta_renovacion: "Precio de renovación"
+  etiqueta_alta: "Precio de nuevo abonado"
+  etiqueta_suplemento: "Coste de alta"
+  etiqueta_total: "Precio que ordena el ranking"
+  etiqueta_zona: "Zona más económica para adulto"
+  etiqueta_partidos: "Partidos de liga incluidos"
+  etiqueta_copa: "Copa del Rey incluida"
+  etiqueta_salario: "Salario bruto medio anual"
+  etiqueta_hora: "Equivalente por hora"
+  etiqueta_horas: "Horas de trabajo"
+  etiqueta_por_partido: "Precio por partido de liga"
+  etiqueta_estado: "Estado del dato"
+  etiqueta_confianza: "Confianza"
+  etiqueta_consulta: "Fecha de consulta"
+  etiqueta_nota: "Salvedades"
+  ver_fuente: "Ver la fuente original"
+  formula_horas: "{precio} ÷ ({salario} ÷ {horas_anuales} h) = {resultado} horas"
+  formula_partido: "{precio} ÷ {partidos} partidos = {resultado} por partido"
+
+datos:
+  titulo: "Datos"
+  entradilla: "Todos los datos, filtrables y descargables. Cada fila lleva su fuente y su fecha."
+  filtro_comunidad: "Comunidad autónoma"
+  filtro_confianza: "Confianza"
+  filtro_todos: "Todas"
+  descargar: "Descargar en CSV"
+  nombre_fichero: "precio-del-futbol-{temporada}.csv"
+  sin_resultados: "Ningún club cumple los filtros elegidos. Prueba a quitar alguno."
+
+metodologia:
+  titulo: "Metodología"
+  intro: "Qué se compara, qué se deja fuera y qué no se puede saber."
+  titulo_fuentes: "Todas las fuentes consultadas"
+  titulo_descartados: "Clubes revisados que no entran en el ranking"
+  tabla_descartados:
+    club: "Club"
+    ciudad: "Ciudad"
+    estado_verificacion: "Estado"
+    url_revisada: "Dirección revisada"
+    fecha_consulta: "Fecha de consulta"
+    nota: "Qué se buscó"
+  tabla_fuentes:
+    titulo: "Documento"
+    url: "Dirección consultada"
+    fecha_consulta: "Fecha de consulta"
+  secciones:
+    - titulo: "Qué mide el número estrella"
+      cuerpo: |
+        El abono de temporada más barato para un adulto, dividido entre lo que
+        gana por hora una persona con el salario bruto medio de la comunidad
+        autónoma del club.
+
+        No dice que un aficionado concreto trabaje esas horas. Dice cuántas
+        horas de trabajo medio de su territorio cuesta ese abono. Es una unidad
+        de comparación entre ciudades, no una medida de esfuerzo personal.
+    - titulo: "Qué abono se compara"
+      cuerpo: |
+        El de temporada completa de liga, para una persona adulta sin ningún
+        descuento, en la zona más económica del estadio, al precio que pagaría
+        quien se abona por primera vez.
+
+        Cuando el club obliga a pagar una cuota de socio para tener asiento, esa
+        cuota se suma: es lo que desembolsa el aficionado.
+    - titulo: "Qué queda fuera, y no por descuido"
+      cuerpo: |
+        Carnés joven, infantil y de mayores. Descuentos por desempleo,
+        discapacidad, familia numerosa o antigüedad. Descuentos por ser
+        accionista. Promociones y precios de lanzamiento. Palcos, zonas
+        preferentes y cualquier localidad con servicios incluidos. Gradas de
+        animación y de peñas, porque exigen pertenecer a un colectivo. Zonas de
+        movilidad reducida, porque requieren acreditación. Localidades de
+        visitante. Abonos de media temporada, de copa o de competición europea.
+    - titulo: "Por qué no todos los abonos valen lo mismo aunque cuesten igual"
+      cuerpo: |
+        No todos cubren los mismos partidos. Hay clubes cuyo abono incluye los
+        diecinueve partidos de liga en casa y además la Copa del Rey, y hay al
+        menos un club que aparta dos jornadas de liga y las cobra por separado.
+
+        Por eso el precio por partido se divide entre los partidos que cada
+        abono cubre de verdad, y no entre diecinueve en todos los casos.
+    - titulo: "De dónde salen los salarios"
+      cuerpo: |
+        Del Instituto Nacional de Estadística, Encuesta Anual de Estructura
+        Salarial, salario bruto medio anual por trabajador y comunidad autónoma,
+        con datos definitivos de 2024.
+
+        Se descargan de la interfaz de datos del organismo y se procesan sin
+        intermediarios, porque durante la construcción se detectó que las
+        versiones resumidas de esa tabla circulan con filas desplazadas.
+
+        Se usa bruto y no neto: el neto depende de la situación personal de cada
+        contribuyente y no es comparable entre territorios sin suposiciones que
+        este trabajo prefiere no hacer.
+    - titulo: "Limitaciones que conviene tener presentes"
+      cuerpo: |
+        La comunidad autónoma es una unidad geográfica gruesa: mete en el mismo
+        saco a Getafe y al centro de Madrid, o a Cornellà y a Barcelona.
+
+        El dato salarial es de 2024 y los precios son de la temporada 2026/27.
+        No se actualiza a euros de hoy porque hacerlo obligaría a asumir una
+        hipótesis de inflación que este trabajo no necesita.
+
+        Varios clubes tienen el aforo de abonados completo y no venden abonos
+        nuevos con libertad. El precio existe, pero el producto no está
+        realmente disponible para cualquiera.
+    - titulo: "Los clubes que no publican su tarifa"
+      cuerpo: |
+        Durante la recogida aparecieron clubes que publican en abierto las fases
+        de la campaña, las fechas, las franjas de edad y hasta las obligaciones
+        del abonado, pero no el precio, que solo existe tras identificarse en la
+        plataforma de renovación o dentro del proceso de compra.
+
+        Esos clubes no entran en el ranking, porque no hay precio verificable.
+        Pero el hecho se publica: forma parte de la respuesta a la pregunta de
+        cuánto cuesta ir al fútbol.
+    - titulo: "Cómo se recogieron los datos"
+      cuerpo: |
+        Solo información visible sin iniciar sesión. Nunca se completó un
+        proceso de compra ni se creó ninguna cuenta. Se comprobaron las reglas
+        de rastreo de cada dominio antes de consultarlo. No se recogió ningún
+        dato personal.
+
+        Cada precio guarda la dirección exacta consultada y la fecha, para que
+        cualquiera pueda repetir la comprobación.
+
+estados:
+  verificado: "Verificado"
+  estimacion: "Estimación"
+  no_publicado: "No publicado"
+  sin_confirmar: "Sin confirmar"
+
+confianza:
+  alta: "Alta"
+  media: "Media"
+  baja: "Baja"
+
+tramos:
+  muy_bajo: "Muy por debajo de la media"
+  bajo: "Por debajo de la media"
+  medio: "En la media"
+  alto: "Por encima de la media"
+  muy_alto: "Muy por encima de la media"
+
+comunes:
+  # Entrecomillados a propósito: YAML interpreta `no` sin comillas como el
+  # booleano falso y la clave dejaría de ser la cadena "no".
+  "si": "Sí"
+  "no": "No"
+  sin_dato: "Sin dato"
+  euros: "€"
+  horas: "h"
+  partidos: "partidos"
+
+errores:
+  datos_no_encontrados: "No se encuentran los archivos de datos. Revisa que la carpeta de datos contenga los cuatro ficheros."
+  dataset_vacio: "El dataset está vacío. No hay nada que mostrar."
+  club_sin_precio: "Este club no tiene precio de abono verificado."
+  salario_ausente: "Falta el salario de la comunidad autónoma de este club, así que no se puede calcular el precio en horas."
+
+pie:
+  disclaimer: "Prototipo independiente elaborado con información pública, sin afiliación ni respaldo de ningún club ni de ninguna competición. Los precios corresponden a la fecha de consulta y pueden cambiar. Verifica en la web oficial del club antes de comprar."

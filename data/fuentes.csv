@@ -1,6 +1,13 @@
 fuente_id,club_id,titulo,url,tipo_fuente,fecha_consulta,robots_comprobado,acceso_sin_login
 f_osasuna_01,osasuna,Guía del socio 2026-27 (tarifas oficiales),https://www.osasuna.es/public/Attachment/2026/6/guiasocios_compressed1.pdf,tarifario_oficial,2026-07-27,si,si
 f_getafe_01,getafe,Campaña Renovación de Abonos 2026/2027,https://www.getafecf.com/campana-renovacion-de-abonos-temporada-20262027,tarifario_oficial,2026-07-27,si,si
-f_espanyol_01,espanyol,Abonos 26/27 - Tabla de precios (dossier oficial),https://www.rcdespanyol.com/uploads/_documents/news/20330/152797.pdf,tarifario_oficial,2026-07-27,si,si
+f_espanyol_01,espanyol,Abonos 26/27. Dossier oficial con tabla de precios,https://www.rcdespanyol.com/uploads/_documents/news/20330/152797.pdf,tarifario_oficial,2026-07-27,si,si
 f_espanyol_02,espanyol,Precio carnet de abonado,https://www.rcdespanyol.com/es/carnet-abonado-precios,pagina_oficial,2026-07-27,si,si
-f_ine_01,,INE. Encuesta Anual de Estructura Salarial 2024. Datos definitivos,https://www.ine.es/dyngs/Prensa/EAES2024.htm,estadistica_oficial,2026-07-27,si,si
+f_celta_01,celta,Campaña de abonados 26/27. Preguntas frecuentes con precios del abono,https://rccelta.es/app/uploads/2026/06/FAQS-26-CAST.pdf,tarifario_oficial,2026-07-28,si,si
+f_racing_01,racing,La renovación de abonos para la temporada 2026/27 abierta online y en las taquillas de El Sardinero,https://www.realracingclub.es/noticias/la-renovacion-de-abonos-para-la-temporada-202627-abierta-online-y-en-las-taquillas-de-el-sardinero,pagina_oficial,2026-07-28,si,si
+f_malaga_01,malaga,Dossier informativo campaña de abonos 26/27,https://statics-maker.llt-services.com/mga/documents/2026/07/09/05fdaee4-58f1-4224-a25b-994b6c1fed84-587.pdf,tarifario_oficial,2026-07-28,sin_robots_txt,si
+f_malaga_02,malaga,Campaña de Abonados de la temporada 26/27,https://www.malagacf.com/noticias/lo-conseguimos-mucho-antes-de-conseguirlo,pagina_oficial,2026-07-28,si,si
+f_deportivo_01,deportivo,Dossier abonos 26/27,https://scdn.ovixia.app/files/scn1tr4b/production/7a9bfe70-3846-4dc3-970f-c4085aa2d59d.pdf,tarifario_oficial,2026-07-28,sin_robots_txt,si
+f_deportivo_02,deportivo,Abonados. Campaña 26/27,https://www.rcdeportivo.es/es/abonados,pagina_oficial,2026-07-28,si,si
+f_levante_01,levante,Dossier campaña de renovaciones 2026-2027,https://abonos.levanteud.com/assets/img/DossierAbonos_2627_ES.pdf,tarifario_oficial,2026-07-28,si,si
+f_ine_01,,INE. Encuesta Anual de Estructura Salarial. Medias y percentiles por sexo y CCAA (tabla 28191). Año 2024,https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/28191?nult=1,estadistica_oficial_api,2026-07-28,si,si

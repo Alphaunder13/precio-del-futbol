@@ -1,4 +1,9 @@
 club_id,nombre,ciudad,provincia,comunidad_autonoma,estadio,url_oficial
-osasuna,CA Osasuna,Pamplona,Navarra,Navarra,Estadio El Sadar,https://www.osasuna.es/
-getafe,Getafe CF,Getafe,Madrid,Madrid,Estadio Coliseum,https://www.getafecf.com/
+osasuna,CA Osasuna,Pamplona,Navarra,Navarra,El Sadar,https://www.osasuna.es/
+getafe,Getafe CF,Getafe,Madrid,Madrid,Coliseum,https://www.getafecf.com/
 espanyol,RCD Espanyol de Barcelona,Cornellà de Llobregat,Barcelona,Cataluña,RCDE Stadium,https://www.rcdespanyol.com/
+celta,RC Celta,Vigo,Pontevedra,Galicia,Abanca-Balaídos,https://rccelta.es/
+racing,Real Racing Club,Santander,Cantabria,Cantabria,El Sardinero,https://www.realracingclub.es/
+malaga,Málaga CF,Málaga,Málaga,Andalucía,La Rosaleda,https://www.malagacf.com/
+deportivo,RC Deportivo,A Coruña,A Coruña,Galicia,Abanca-Riazor,https://www.rcdeportivo.es/
+levante,Levante UD,Valencia,Valencia,Comunitat Valenciana,Ciutat de València,https://www.levanteud.com/

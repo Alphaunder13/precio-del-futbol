@@ -1,0 +1,78 @@
+# Configuración general de la aplicación.
+# El texto visible no vive aquí, vive en copy_es.yaml.
+
+app:
+  version: "0.1.0"
+  temporada: "2026/27"
+  competicion: "LaLiga EA Sports"
+  idioma: "es-ES"
+
+rutas:
+  datos: "data"
+  clubes: "data/clubes.csv"
+  precios: "data/precios.csv"
+  fuentes: "data/fuentes.csv"
+  salarios: "data/salarios.csv"
+  descartados: "data/descartados.csv"
+
+formato:
+  # Formato español: separador de miles con punto, decimal con coma.
+  separador_miles: "."
+  separador_decimal: ","
+  simbolo_moneda: "€"
+  formato_fecha: "%d/%m/%Y"
+
+# Enums permitidos. Los tests fallan si el dataset contiene otro valor.
+enums:
+  estado_verificacion:
+    - verificado
+    - estimacion
+    - no_publicado
+    - sin_confirmar
+  confianza:
+    - alta
+    - media
+    - baja
+  metrica:
+    - abono_adulto_mas_barato
+    - entrada_suelta_mas_barata
+
+# Nombres propios, marcas y competiciones que pueden aparecer en inglés en la
+# interfaz. Cualquier otra cadena en inglés hace fallar el test de idioma.
+whitelist_ingles:
+  - "El Precio del Fútbol"
+  - "LaLiga EA Sports"
+  - "LaLiga"
+  - "EA Sports"
+  - "Streamlit"
+  - "RCDE Stadium"
+  - "Coliseum"
+  - "Racing"
+  - "Real Racing Club"
+  - "Club"
+  - "Fans"
+  - "Gol"
+  - "Corner"
+  - "Marathón"
+  - "INE"
+  - "CSV"
+
+# Columnas del CSV de descarga, con su nombre legible en español.
+# El usuario nunca ve un nombre técnico en snake_case.
+columnas_descarga:
+  nombre: "Club"
+  ciudad: "Ciudad"
+  comunidad_autonoma: "Comunidad autónoma"
+  estadio: "Estadio"
+  zona: "Zona más económica"
+  precio_base_eur: "Precio base (€)"
+  suplemento_alta_eur: "Coste de alta (€)"
+  precio_eur: "Precio total (€)"
+  horas_trabajo: "Horas de trabajo"
+  precio_por_partido: "Precio por partido (€)"
+  partidos_liga_incluidos: "Partidos de liga incluidos"
+  incluye_copa: "Incluye Copa del Rey"
+  estado_verificacion: "Estado"
+  confianza: "Confianza"
+  fecha_consulta: "Fecha de consulta"
+  url: "Fuente"

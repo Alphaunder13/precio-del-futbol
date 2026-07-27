@@ -7,6 +7,43 @@ no semver estricto, porque aquí lo que cambia sobre todo son los datos.
 
 ## [No publicado] — v0.1.0 en construcción
 
+### 2026-07-28 — Dataset de ocho clubes y producto completo
+
+**Añadido**
+- Cinco clubes más, todos con tarifario oficial verificado: RC Celta,
+  Real Racing Club, Málaga CF, RC Deportivo y Levante UD. El dataset cubre ocho
+  clubes en siete comunidades autónomas.
+- `data/descartados.csv`: los clubes revisados que no entran al ranking, con la
+  dirección revisada, la fecha y qué se buscó. Alimenta la página de Metodología,
+  de modo que el recuento que ve el usuario no es un número escrito a mano.
+- `src/`: `data_loader`, `validacion`, `index`, `export` y `ui_components`.
+- `scripts/importar.py`: importador atómico. Valida en memoria, escribe a un
+  temporal y sustituye con `os.replace`. Con `--dry-run` informa de qué entraría
+  y qué se rechaza sin tocar nada.
+- Las cinco páginas: Inicio, Ranking, Ficha de club, Datos y Metodología.
+- 32 tests: integridad referencial, rangos, enums, determinismo del índice,
+  coincidencia entre la descarga y el dataset, y vigilancia del idioma.
+
+**Corregido**
+- Los salarios se descargan ahora de la interfaz de datos del INE en formato
+  máquina. Dos lecturas de la misma nota de prensa devolvieron cifras distintas
+  para Cantabria y Comunitat Valenciana, y una tercera mezcló años. El error era
+  de transcripción, no del organismo, pero habría contaminado el ranking entero
+  de esas comunidades.
+- El test de idioma detectó texto técnico en un mensaje de error visible ("la
+  carpeta data") y en la entradilla de la página de Datos ("el dataset
+  completo"). Corregidos los dos.
+- `comunes.no` en el copy estaba sin comillas y YAML lo interpretaba como el
+  booleano falso, así que la clave no era la cadena "no".
+
+**Decidido**
+- D-013: las gradas de animación, de peñas y de movilidad reducida quedan fuera
+  del comparable aunque a veces sean la localidad más barata, porque exigen
+  pertenecer a un colectivo o acreditar una condición personal.
+- D-014: las estadísticas oficiales se leen en formato máquina, nunca de un
+  resumen de texto.
+
+
 ### 2026-07-27 — Comparable definido y tres primeros clubes verificados
 
 **Añadido**

@@ -58,5 +58,5 @@ rangos_validos:
 
 # Orden por defecto del ranking.
 orden_por_defecto:
-  columna: horas_trabajo_abono
+  columna: horas_trabajo
   ascendente: true

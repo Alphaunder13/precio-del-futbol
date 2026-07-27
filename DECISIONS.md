@@ -294,3 +294,53 @@ guarda la búsqueda completa.
 
 El producto responde a "cuánto cuesta ir al fútbol". "No se puede saber sin
 identificarse" es una respuesta legítima a esa pregunta y se comunica como tal.
+
+---
+
+## D-013 — Las gradas de acceso condicionado quedan fuera
+
+**Fecha:** 2026-07-28
+**Estado:** vigente
+**Motivo:** surgió al comparar ocho clubes.
+
+Casi todos los clubes tienen alguna localidad barata a la que **no puede acceder
+cualquiera**: gradas de animación (Levante Fans 1909, Arabako Garrasia, Grada
+Animación del Espanyol), gradas de peñas (Deportivo) y zonas de movilidad
+reducida (Málaga, Espanyol, Racing).
+
+Ninguna entra en `abono_adulto_mas_barato`, aunque a veces sea la más económica.
+El motivo es el mismo en los tres casos: exigen pertenecer a un colectivo o
+acreditar una condición personal, y D-002 pide el precio que paga un adulto
+cualquiera sin condiciones. Se anota en la nota de cada club cuando aplica.
+
+Lo mismo vale para los descuentos por ser accionista del club (Levante), por
+antigüedad (Racing, Sevilla) o por convenio: son condiciones personales.
+
+---
+
+## D-014 — Las estadísticas oficiales se leen en formato máquina
+
+**Fecha:** 2026-07-28
+**Estado:** vigente
+**Motivo:** se detectó un error real durante la carga.
+
+Al cargar los salarios se consultó dos veces la misma nota de prensa del INE y
+las dos lecturas **no coincidieron**: una asignaba a Comunitat Valenciana la
+cifra que la otra daba a Cantabria. Una tercera consulta devolvió valores de un
+año distinto. El error era de transcripción al leer una tabla de texto, no del
+organismo.
+
+A partir de ahora los datos estadísticos se descargan de la interfaz de datos
+del INE en formato máquina y se procesan con código, sin ningún resumen de por
+medio:
+
+```
+https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/28191?nult=1
+```
+
+La cifra nacional que devuelve esa consulta (29.540,26 € en 2024) coincide con
+la publicada, lo que sirve de comprobación cruzada.
+
+**Regla general:** si un dato existe en formato máquina, se toma de ahí. Leer
+una tabla a ojo es una fuente de error silenciosa, y este producto no puede
+permitirse un salario mal asignado: contamina todo el ranking de esa comunidad.
