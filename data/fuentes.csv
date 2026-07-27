@@ -1,0 +1,6 @@
+fuente_id,club_id,titulo,url,tipo_fuente,fecha_consulta,robots_comprobado,acceso_sin_login
+f_osasuna_01,osasuna,Guía del socio 2026-27 (tarifas oficiales),https://www.osasuna.es/public/Attachment/2026/6/guiasocios_compressed1.pdf,tarifario_oficial,2026-07-27,si,si
+f_getafe_01,getafe,Campaña Renovación de Abonos 2026/2027,https://www.getafecf.com/campana-renovacion-de-abonos-temporada-20262027,tarifario_oficial,2026-07-27,si,si
+f_espanyol_01,espanyol,Abonos 26/27 - Tabla de precios (dossier oficial),https://www.rcdespanyol.com/uploads/_documents/news/20330/152797.pdf,tarifario_oficial,2026-07-27,si,si
+f_espanyol_02,espanyol,Precio carnet de abonado,https://www.rcdespanyol.com/es/carnet-abonado-precios,pagina_oficial,2026-07-27,si,si
+f_ine_01,,INE. Encuesta Anual de Estructura Salarial 2024. Datos definitivos,https://www.ine.es/dyngs/Prensa/EAES2024.htm,estadistica_oficial,2026-07-27,si,si

@@ -1,0 +1,62 @@
+# Parámetros del cálculo. Ningún valor de este archivo puede estar escrito en el
+# código. Cambiar un número aquí y recalcular debe bastar para auditar el índice.
+# Ver DECISIONS.md D-007 y D-008.
+
+version: "0.1.0"
+
+jornada_laboral:
+  # Horas de trabajo equivalentes a un año a jornada completa. Divisor
+  # convencional y explícito (D-007). 40 h/semana x ~45 semanas efectivas.
+  horas_anuales: 1800
+  # Texto que se muestra al usuario cuando expande el cálculo.
+  nota: "Jornada completa equivalente a 1.800 horas al año."
+
+partidos:
+  # Partidos de liga como local en una temporada de 20 equipos.
+  liga_local_por_temporada: 19
+
+redondeo:
+  horas_trabajo: 1        # decimales al mostrar horas
+  euros: 2                # decimales al mostrar euros
+  precio_por_partido: 2   # decimales al mostrar €/partido
+
+# Umbrales para la etiqueta cualitativa del ranking. Se comparan contra las
+# horas de trabajo del abono más barato. Son cortes descriptivos, no un juicio:
+# el texto asociado vive en copy_es.yaml.
+umbrales_horas_abono:
+  muy_bajo: 20
+  bajo: 30
+  medio: 45
+  alto: 60
+  # por encima de "alto" se etiqueta como el tramo superior
+
+# Confianza del registro. Afecta a cómo se muestra, nunca al valor del precio.
+confianza:
+  alta:
+    # Tarifario oficial del club, adulto, zona más barata, sin ambigüedad.
+    etiqueta_clave: confianza_alta
+  media:
+    # Falta algún componente (por ejemplo el coste de alta de nuevo abonado)
+    # o el club no encaja limpiamente en la definición del comparable.
+    etiqueta_clave: confianza_media
+  baja:
+    # El dato existe pero con salvedades importantes documentadas en la nota.
+    etiqueta_clave: confianza_baja
+
+# Validación de rangos. Un precio fuera de estos límites detiene la importación:
+# casi siempre significa un error de unidad o de lectura, no un precio real.
+rangos_validos:
+  abono_eur:
+    minimo: 20
+    maximo: 3000
+  entrada_eur:
+    minimo: 5
+    maximo: 500
+  salario_bruto_anual_eur:
+    minimo: 10000
+    maximo: 60000
+
+# Orden por defecto del ranking.
+orden_por_defecto:
+  columna: horas_trabajo_abono
+  ascendente: true
