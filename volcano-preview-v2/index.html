@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08090c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="VOLCANO">
+<title>VOLCANO CUP</title>
+<style>
+:root{--bg:#08090c;--card:#111318;--card2:#171a20;--line:#262932;--text:#f7f7f5;--muted:#969aa3;--lava:#ff5722;--lava2:#ff8a43;--ok:#60d394;--gold:#ffc857}
+*{box-sizing:border-box}html,body{margin:0;background:radial-gradient(circle at 50% -10%,#40170d 0,transparent 28%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;min-height:100%;-webkit-tap-highlight-color:transparent}
+body{padding:env(safe-area-inset-top) 0 calc(92px + env(safe-area-inset-bottom))}
+button{font:inherit;color:inherit}.app{max-width:520px;margin:auto;padding:12px 14px 20px}.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:7px 0 12px;background:linear-gradient(#08090cf5 75%,transparent)}
+.brand{display:flex;gap:10px;align-items:center}.logo{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#2c1711,#111319);border:1px solid #55301e;box-shadow:0 0 30px #ff572229;font-size:21px}.brand b{display:block;letter-spacing:.12em;font-size:14px}.brand small{color:var(--muted);font-size:9px;letter-spacing:.12em}.gear{width:42px;height:42px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#13161c,#101116 58%,#26110c);border:1px solid #4a2519;border-radius:26px;padding:22px;box-shadow:0 20px 55px #0008}.eyebrow{display:inline-flex;align-items:center;gap:6px;color:#ffb99b;background:#ff572211;border:1px solid #ff572244;border-radius:99px;padding:6px 9px;font-size:10px;font-weight:800;letter-spacing:.08em}.dot{width:6px;height:6px;border-radius:50%;background:var(--lava);box-shadow:0 0 12px var(--lava)}
+.hero h1{font-size:34px;margin:16px 0 4px;letter-spacing:-.04em}.sub{color:var(--muted);font-size:13px}.poolLabel{margin-top:22px;color:#f0b9a3;font-size:10px;letter-spacing:.13em}.pool{font-size:50px;font-weight:900;letter-spacing:-.06em;margin:2px 0}.pool span{font-size:15px;color:var(--muted);font-weight:600}.bar{height:7px;background:#23262d;border-radius:99px;overflow:hidden}.bar i{height:100%;display:block;background:linear-gradient(90deg,var(--lava),var(--lava2))}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:13px}.stat{border:1px solid var(--line);background:#ffffff08;border-radius:14px;padding:10px}.stat b{display:block;font-size:14px}.stat small{color:var(--muted);font-size:9px;text-transform:uppercase}
+.section{margin-top:19px}.sectionHead{display:flex;align-items:end;justify-content:space-between;margin-bottom:9px}.sectionHead h2{font-size:17px;margin:0}.sectionHead span{font-size:10px;color:var(--lava2)}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:15px}.moneyRow,.rankRow,.playerRow{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)}.moneyRow:last-child,.rankRow:last-child,.playerRow:last-child{border:0}.muted{color:var(--muted);font-size:11px}.amount{font-size:18px;font-weight:900}
+.medal{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;color:#111;font-weight:900;margin-right:10px}.m1{background:#ffc857}.m2{background:#d8dde5}.m3{background:#ba7d4f}.left{display:flex;align-items:center}.teamIcon{width:35px;height:35px;border-radius:12px;display:grid;place-items:center;background:var(--card2);border:1px solid var(--line);margin-right:10px}
+.tabs{display:flex;gap:4px;padding:4px;border-radius:15px;background:#0e1015;border:1px solid var(--line);margin:15px 0}.tab{flex:1;border:0;border-radius:11px;background:transparent;color:var(--muted);padding:9px 5px;font-size:11px}.tab.on{background:#24272e;color:white;font-weight:800}
+.table{overflow:hidden;border:1px solid var(--line);border-radius:18px}.tr{display:grid;grid-template-columns:24px 1fr 28px 28px 32px 38px;align-items:center;min-height:48px;padding:0 8px;border-bottom:1px solid var(--line);font-size:11px}.tr:last-child{border:0}.tr.head{min-height:36px;color:var(--muted);font-size:9px;background:#0e1015}.tr.q1{box-shadow:inset 3px 0 var(--ok)}.tr.q2{box-shadow:inset 3px 0 var(--lava)}.tr.out{opacity:.48}.name{font-weight:750}
+.match{background:var(--card);border:1px solid var(--line);border-radius:17px;margin:8px 0;padding:12px}.matchLine{display:grid;grid-template-columns:1fr 48px 1fr;align-items:center;font-size:12px}.matchLine .r{text-align:right}.score{text-align:center;background:#22252c;border-radius:10px;padding:7px;font-weight:900}
+.round{color:var(--lava2);font-size:10px;letter-spacing:.12em;font-weight:900;margin:14px 0 7px}.bracket{border-left:3px solid var(--lava);padding-left:11px}.bracket .match{margin-top:0}.winner{font-weight:900}.loser{color:var(--muted)}
+.teamGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.teamCard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px}.teamCard .teamIcon{margin-bottom:13px}.teamCard b{font-size:13px}.teamCard small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.pill{font-size:9px;border:1px solid var(--line);background:var(--card2);border-radius:99px;padding:5px 8px}.paid{color:#8df0b6;border-color:#60d39455;background:#60d39411}.adminNotice{border:1px solid #ff572244;background:#ff572211;color:#ffc0a6;border-radius:15px;padding:11px;font-size:11px}.check{border:1px solid var(--line);background:var(--card2);border-radius:11px;padding:8px 9px;font-size:10px}.check.on{color:#90f2b9;border-color:#60d39455;background:#60d39412}
+.nav{position:fixed;z-index:50;left:0;right:0;bottom:0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:linear-gradient(transparent,#08090cf5 26%)}.navInner{max-width:520px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);background:#101217;border:1px solid var(--line);border-radius:20px;padding:5px}.nav button{border:0;border-radius:14px;background:transparent;color:#858993;padding:7px 2px;font-size:9px}.nav button span{display:block;font-size:18px;margin-bottom:2px}.nav button.on{background:#20232a;color:white}
+.screenTitle{font-size:28px;letter-spacing:-.04em;margin:12px 0 4px}.screenSub{margin:0 0 12px;color:var(--muted);font-size:12px}
+.modalBg{position:fixed;inset:0;z-index:100;background:#000b;display:flex;align-items:flex-end}.modal{width:100%;max-width:520px;margin:auto;background:#111318;border-radius:25px 25px 0 0;border:1px solid var(--line);padding:18px 14px calc(22px + env(safe-area-inset-bottom));max-height:88vh;overflow:auto}.modal h3{margin:0 0 5px}.close{float:right;border:0;background:transparent;font-size:23px}.input{width:100%;padding:12px;background:#181b21;border:1px solid var(--line);border-radius:12px;color:white;margin:6px 0 12px}.primary{width:100%;border:0;border-radius:14px;padding:12px;background:linear-gradient(135deg,var(--lava),var(--lava2));font-weight:900}
+@media(max-width:370px){.hero{padding:19px}.pool{font-size:43px}.hero h1{font-size:30px}.app{padding-left:10px;padding-right:10px}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
